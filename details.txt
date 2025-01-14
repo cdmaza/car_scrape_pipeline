@@ -1,0 +1,1 @@
+year_produce brand model car_type gear_type engine_cap mileage old_price
