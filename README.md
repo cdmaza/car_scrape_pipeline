@@ -4,7 +4,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 
 **(Disclaimer: Data used for educational purpose)**
 
-![tittle](https://paultan.org/image/2020/06/2020-Used-Car-Buying-Guide-2.jpg)
+![tittle](https://carsomemy.s3.amazonaws.com/wp/used%20cars%20rs.jpg)
 
 **Project aim:**
 - Price Trends
