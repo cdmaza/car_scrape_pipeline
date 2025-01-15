@@ -6,13 +6,17 @@ import time
 import requests
 
 ua = UserAgent()
+
 headers = {
     "User-Agent": ua.random,
     "Accept-Language": "en-US,en;q=0.9",
     "Accept-Encoding": "gzip, deflate, br",
     "Connection": "keep-alive",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
-    "Referer": "https://www.google.com/",
+    "Referer": "https://carro.co/",
+    "Sec-Ch-Ua": "Not_A Brand",
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": "Windows",
     "Upgrade-Insecure-Requests": "1"
 }
 
@@ -57,7 +61,7 @@ def scrape():
             else:
                 print("No cars found.")
         else:
-            print("No results found with id 'sc-jlyJG'.")
+            print("No results f  ound with id 'sc-jlyJG'.")
     else:
         print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
         print(response.text)  # Print the response content for debugging
@@ -65,7 +69,7 @@ def scrape():
     print(i)
 
 if __name__ == '__main__':
-    URL = "https://www.carsome.my/buy-car"
+    URL = "https://carro.co/my/en?utm_source=google&utm_medium=sem&utm_campaign=2024_PM_GG_MY_WEB_BUY_SEM_LEADS_Generic-BuyUsedCars_AlwaysOn&utm_content=Retail_Search_ENG_General_Carro_693302625813&utm_term=car%20dealerships%20near%20me&gad_source=1&gclid=Cj0KCQiAs5i8BhDmARIsAGE4xHz9-ZCDugvj-2ERMmUZHiPcBx0SQTrjGW9BMDv6IbZ1UtjCNOb2FdYaAgQhEALw_wcB"
     # URL = "https://www.carousell.com.my/categories/cars-32/?searchId=lDfBJN"
     tryjer(URL)
     # scrape()
