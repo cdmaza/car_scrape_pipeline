@@ -60,7 +60,7 @@ def get_validate_before(df, columns_neededs):
     if non_empty_matching_columns:
         return True, df[matching_columns]
 
-    return False, None
+    return False, None 
 
 # --------------------
 
