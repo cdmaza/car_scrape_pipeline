@@ -28,7 +28,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 1st stage: Extracting data.
 
 - CSV File
-- WebScrape: [Caresoull](https://www.carousell.com.my/categories/cars-32/?searchId=KQYLkR)
+- WebScrape: `Octoparse`
 
 #### Data staging (Transformation)
 
