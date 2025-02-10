@@ -7,16 +7,15 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 ![tittle](https://carsomemy.s3.amazonaws.com/wp/used%20cars%20rs.jpg)
 
 **Project aim:**
-- Price Trends
-- Aftermarket price sell
+- Update on car information
+- Aftermarket price sell by date
 
 ## Pipeline design 
 
 ![Pipeline diagram](img/pipeline_design.jpg)
 
 ## Tools
-- Webscrape: BeautifulSoup
-- Data Lake: S3
+- Webscrape: Selenium
 - Data Warehouse: PostgreSQL
 - Language: Python, SQL
 - Orchestration: Airflow
@@ -24,21 +23,32 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 
 ## Data Ingestion
 
-#### Source (Extract)
+#### Data Source (Extraction)
+
 1st stage: Extracting data.
 
 - CSV File
-- WebScrape: `Octoparse`
+- WebScrape: Multiple source
+- Tools: Selenium
 
-#### Data staging (Transformation)
+    ```
+    Webriver Chrome:
+    - Chrome version (Version 132.0.6834.160 (Official Build) (64-bit))
+    - Webdriver version (https://storage.googleapis.com/chrome-for-testing-public/132.0.6834.160/win64/chrome-win64.zip)
+    ```
+
+#### Data Clean (Transformation)
 
 2nd stage: Cleaning, transform, and aggregating.
 
 ![Data Staging diagram](img/transformation_flow.jpg)
 
-#### Data Mart (Load)
+#### 3 layer Staging (Load)
 
-3rd stage: Load data to mart (aftermarket_price & price_trend)
+Implementation of 3 data layer stage:
+1. 1st layer: Load raw (raw.mudah, raw.carlist, raw.carsome)
+2. 2nd layer: Load combined car info (car_data)
+3. 3rd layer: Load data to mart (car_info & car_price_trend)
 
 **Schema**
 
