@@ -2,7 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+tutorial/
+plugins/
 # C extensions
 *.so
 
@@ -22,8 +23,9 @@ var/
 wheels/
 *.egg-info/
 .installed.cfg
+details.txt
 *.egg
-
+chromedriver-win64/
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.

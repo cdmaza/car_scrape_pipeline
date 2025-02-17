@@ -15,7 +15,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 ![Pipeline diagram](img/pipeline_design.jpg)
 
 ## Tools
-- Webscrape: Selenium
+- Webscrape: Selenium, Undetected_webdriver
 - Data Warehouse: PostgreSQL
 - Language: Python, SQL
 - Orchestration: Airflow
@@ -28,8 +28,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 1st stage: Extracting data.
 
 - CSV File
-- WebScrape: Multiple source
-- Tools: Selenium
+- WebScrape: [Mudah](https://www.mudah.my/), [Carsome](https://www.carsome.my/), [Carlist](https://www.carlist.my/)
 
     ```
     Webriver Chrome:
@@ -41,15 +40,37 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 
 2nd stage: Cleaning, transform, and aggregating.
 
+
+Raw attribute been extracted:
+```
+    title string
+    brand string
+    model string
+    model_group string
+    variant string
+    body_type string
+    transmission string
+    mileage string
+    type string
+    capacity string
+    price string
+    manufactured string
+    data_posted string
+    date_extracted string
+    detail_link string
+```
+
+**Attribute Schema**
+
 ![Data Staging diagram](img/transformation_flow.jpg)
 
 #### 3 layer Staging (Load)
 
 Implementation of 3 data layer stage:
-1. 1st layer: Load raw (raw.mudah, raw.carlist, raw.carsome)
+1. 1st layer: Load raw (mudah, carlist, carsome)
 2. 2nd layer: Load combined car info (car_data)
 3. 3rd layer: Load data to mart (car_info & car_price_trend)
 
-**Schema**
+**Database Schema**
 
 ![Schema](img/schema_design.jpg)
