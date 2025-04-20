@@ -1,4 +1,7 @@
-pip install pyodbc
-pip instlal pyodbc
-pip install pandas
-pip install confiq
+pyodbc
+pandas
+selenium
+bs4
+wedriver_manager
+undetected_chromedriver
+scrapy
