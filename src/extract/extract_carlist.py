@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import undetected_chromedriver as uc
 
-
+    
 def get_carlist():
     carlist_data = []
     date_extracted = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
