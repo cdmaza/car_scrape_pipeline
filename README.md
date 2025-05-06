@@ -12,7 +12,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 
 ## Pipeline design 
 
-![Pipeline diagram](docs/img/pipeline_design.jpg)
+![Pipeline diagram](./docs/img/pipeline_design.jpg)
 
 ## Tools
 - Webscrape: Selenium, Undetected_webdriver
