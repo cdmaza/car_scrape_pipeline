@@ -1,4 +1,5 @@
 
+/*create bronze table for raw data*/
 CREATE TABLE bronze.car_details (
     title VARCHAR(50) PRIMARY KEY,
     brand VARCHAR(50)
@@ -17,6 +18,7 @@ CREATE TABLE bronze.car_details (
     detail_link NVARCHAR(max)
 );
 
+/*create silver table for transformed data*/
 CREATE TABLE silver.car_details (
     title VARCHAR(50) PRIMARY KEY,
     brand VARCHAR(50)
@@ -35,6 +37,7 @@ CREATE TABLE silver.car_details (
     detail_link NVARCHAR(max)
 );
 
+/*create gold table for insight data*/
 CREATE TABLE gold.aftermarket_price (
     title VARCHAR(50) PRIMARY KEY,
     brand VARCHAR(50)
@@ -52,6 +55,7 @@ CREATE TABLE gold.aftermarket_price (
     date_extracted DATE,
     detail_link NVARCHAR(max)
 );
+
 
 CREATE TABLE gold.price_trends (
     title VARCHAR(50) PRIMARY KEY,
