@@ -12,7 +12,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 
 ## Pipeline design 
 
-![Pipeline diagram](img/pipeline_design.jpg)
+![Pipeline diagram](/docs/img/pipeline_design.jpg)
 
 ## Tools
 - Webscrape: Selenium, Undetected_webdriver
@@ -62,7 +62,7 @@ Raw attribute been extracted:
 
 **Attribute Schema**
 
-![Data Staging diagram](img/transformation_flow.jpg)
+![Data Staging diagram](/docs/img/transformation_flow.jpg)
 
 #### 3 layer Staging (Load)
 
@@ -73,4 +73,4 @@ Implementation of 3 data layer stage:
 
 **Database Schema**
 
-![Schema](img/schema_design.jpg)
+![Schema](/docs/img/schema_design.jpg)
