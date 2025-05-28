@@ -105,3 +105,8 @@ def get_carlist():
         print(e)
     except Exception as e:
         print(f"An error occurred: {e}") 
+
+def get_data():
+    carlist_data = get_carlist()
+    return carlist_data
+
