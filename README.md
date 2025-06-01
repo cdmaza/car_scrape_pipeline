@@ -15,11 +15,13 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 ![Pipeline diagram](img/pipeline_design.jpg)
 
 ## Tools
-- Webscrape: Selenium, Undetected_webdriver
-- Data Warehouse: PostgreSQL
+- Source: Web Scrape
+- Destination: PostgreSQL Warehouse
 - Language: Python, SQL
-- Orchestration: Airflow
-- Container: Docker
+- Code Testing: PyTest
+- Data Quality: Cuallee
+- Scheduler: Airflow
+- CI/CD: Github Action
 
 ## Data Ingestion
 
@@ -28,7 +30,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 1st stage: Extracting data.
 
 - CSV File
-- WebScrape: [Mudah](https://www.mudah.my/), [Carsome](https://www.carsome.my/), [Carlist](https://www.carlist.my/)
+- Web Scrape: Taken from trusted source **(Data used for educational purpose)**
 
     ```
     Webriver Chrome:
@@ -41,7 +43,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 2nd stage: Cleaning, transform, and aggregating.
 
 
-Raw attribute been extracted:
+Raw attribute name been extracted:
 ```
     title string
     brand string
