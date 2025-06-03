@@ -10,7 +10,7 @@ import time
 import undetected_chromedriver as uc
 
     
-def get_carlist():
+def extract_carlist():
     carlist_data = []
     date_extracted = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     page = 1
@@ -106,7 +106,7 @@ def get_carlist():
     except Exception as e:
         print(f"An error occurred: {e}") 
 
-def get_data():
+def get_carlist():
     carlist_data = get_carlist()
     return carlist_data
 

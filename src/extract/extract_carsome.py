@@ -25,7 +25,7 @@ chrome_options.add_argument("--disable-software-rasterizer")
 driver = webdriver.Chrome(ChromeDriverManager().install())
 # driver = uc.Chrome(options=options)
 
-def get_mudah():
+def extract_carsome():
     mudah_data = []
     base_url = f"https://www.mudah.my/malaysia/cars-for-sale"
     page = 1
