@@ -6,3 +6,4 @@ wedriver_manager
 undetected_chromedriver
 scrapy
 great_expectations
+logging
