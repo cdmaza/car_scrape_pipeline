@@ -11,8 +11,6 @@ def get_carsome():
     carsome_data = extract_carsome()
     return carsome_data
 
-def count_data(data_count):
-    return len(data_count)
 
 def quaility_check():
 

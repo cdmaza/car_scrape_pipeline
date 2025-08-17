@@ -54,32 +54,17 @@ class DataQualityChecker:
         
         self.results = []  # Reset results for new check
         
-        # 1. Schema Conformity Check
         self._check_schema_conformity(data, schema)
-        
-        # 2. Data Availability Check
         self._check_data_availability(data_source_url)
-        
-        # 3. Record Count Anomaly Check
         self._check_record_count_anomaly(data, historical_avg_records, record_count_tolerance)
-        
-        # 4. Timestamp Freshness Check
         self._check_timestamp_freshness(data, timestamp_column, freshness_threshold_hours)
-        
-        # 5. Null/Missing Values Check
         self._check_missing_values(data, required_fields)
-        
-        # 6. Duplicate Records Check
         self._check_duplicate_records(data, unique_fields)
-        
-        # 7. Source Identifier Checks
         self._check_source_identifiers(data, id_fields)
         
-        # Compile final results
         return self._compile_results()
     
     def _check_schema_conformity(self, data: pd.DataFrame, schema: Dict[str, type]):
-        """Check if fields/types match expected schema"""
         if not schema:
             self.results.append(QualityCheckResult(
                 "schema_conformity", True, "No schema provided - skipping check"))
@@ -111,7 +96,6 @@ class DataQualityChecker:
         self.results.append(QualityCheckResult("schema_conformity", passed, details))
     
     def _check_data_availability(self, data_source_url: str):
-        """Check if data source is reachable"""
         if not data_source_url:
             self.results.append(QualityCheckResult(
                 "data_availability", True, "No data source URL provided - skipping check"))
@@ -131,7 +115,6 @@ class DataQualityChecker:
         self.results.append(QualityCheckResult("data_availability", passed, details))
     
     def _check_record_count_anomaly(self, data: pd.DataFrame, historical_avg: int, tolerance: float):
-        """Compare record counts to historical averages"""
         current_count = len(data)
         
         if not historical_avg:
@@ -193,7 +176,6 @@ class DataQualityChecker:
         self.results.append(QualityCheckResult("timestamp_freshness", passed, details))
     
     def _check_missing_values(self, data: pd.DataFrame, required_fields: List[str]):
-        """Check for null/missing values in required fields"""
         if not required_fields:
             self.results.append(QualityCheckResult(
                 "missing_values", True, "No required fields specified - skipping check"))
