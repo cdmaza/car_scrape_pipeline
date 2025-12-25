@@ -32,27 +32,14 @@ class DataQualityChecker:
                      unique_fields: List[str] = None,
                      id_fields: List[str] = None) -> Dict[str, Any]:
         
-        self.results = []  # Reset results for new check
+        self.results = []
         
-        # 1. Schema Conformity Check
         self._check_schema_conformity(data, schema)
-        
-        # 2. Data Availability Check
         self._check_data_availability(data_source_url)
-        
-        # 3. Record Count Anomaly Check
         self._check_record_count_anomaly(data, historical_avg_records, record_count_tolerance)
-        
-        # 4. Timestamp Freshness Check
         self._check_timestamp_freshness(data, timestamp_column, freshness_threshold_hours)
-        
-        # 5. Null/Missing Values Check
         self._check_missing_values(data, required_fields)
-        
-        # 6. Duplicate Records Check
         self._check_duplicate_records(data, unique_fields)
-        
-        # 7. Source Identifier Checks
         self._check_source_identifiers(data, id_fields)
         
         # Compile final results
