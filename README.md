@@ -8,7 +8,7 @@ This project demonstrates a simple ETL pipeline designed to automate the extract
 
 **Project aim:**
 - Update on car information
-- Aftermarket price sell by date
+- Aftermarket price sell by dates
 
 ## Pipeline design 
 
