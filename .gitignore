@@ -127,3 +127,4 @@ cython_debug/
 
 .gitignore
 .details.txt
+.src/data/
