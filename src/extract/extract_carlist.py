@@ -7,7 +7,7 @@ from pydantic import ValidationError
 
 logger = get_logger("carlist_extractor")
 
-class WebClient:
+class carlistWebClient:
     def __init__(self, db_url):
         self.db_url = db_url
 

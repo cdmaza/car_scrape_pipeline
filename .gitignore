@@ -128,3 +128,4 @@ cython_debug/
 .gitignore
 .details.txt
 .src/data/
+.src/extract/dumpcode.py    
