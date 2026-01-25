@@ -1,4 +1,5 @@
 import importlib
+import psycopg2
 import logging
 import json
 from datetime import datetime
