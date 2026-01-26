@@ -1,0 +1,12 @@
+car_scrape:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'postgres') }}"
+      user: "{{ env_var('POSTGRES_USER', 'admin') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'password') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_DB', 'warehouse') }}"
+      schema: public
+      threads: 4

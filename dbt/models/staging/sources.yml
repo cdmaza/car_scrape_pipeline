@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('POSTGRES_DB', 'warehouse') }}"
+    schema: public
+    tables:
+      - name: staging_cars
+        description: "Staging table for transformed car data from Polars"
+        columns:
+          - name: source_id
+            description: "Original ID from raw table"
+          - name: title
+            description: "Car listing title"
+          - name: price
+            description: "Listed price"
+          - name: year
+            description: "Manufacturing year"
+          - name: mileage
+            description: "Odometer reading"
+          - name: location
+            description: "Seller location"
+          - name: brand
+            description: "Car brand/make"
+          - name: model
+            description: "Car model"
+          - name: source
+            description: "Data source (carlist/carsome)"
+          - name: extracted_at
+            description: "When data was scraped"

@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_cars
+    description: "Cleaned and standardized car listings"
+    columns:
+      - name: source_id
+        description: "Original ID from source"
+        tests:
+          - not_null
+      - name: title
+        description: "Car listing title"
+        tests:
+          - not_null
+      - name: price
+        description: "Cleaned price as decimal"
+      - name: year
+        description: "Manufacturing year as integer"
+      - name: brand
+        description: "Normalized car brand"
+      - name: model
+        description: "Normalized car model"
+      - name: source
+        description: "Data source identifier"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['carlist', 'carsome']
