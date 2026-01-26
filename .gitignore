@@ -127,7 +127,7 @@ cython_debug/
 
 .gitignore
 .details.txt
-.src/data/
+.data/example
 .src/extract/dumpcode.py
 .src/common/conn_details.py
 .src/common/web_source.py
