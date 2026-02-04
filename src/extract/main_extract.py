@@ -14,7 +14,7 @@ logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
         logging.StreamHandler(),
-        logging.FileHandler(f"logs/extract_{datetime.now().strftime('%Y-%m-%d')}.log")
+        logging.FileHandler(f"logs/extract/extract_{datetime.now().strftime('%Y-%m-%d')}.log")
     ]
 )
 logger = logging.getLogger(__name__)

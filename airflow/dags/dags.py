@@ -5,7 +5,7 @@ from airflow.operators.bash import BashOperator
 
 default_args = {
     "owner": "airflow",
-    "depends_on_past": False,
+    "depends_on_past": False, 
     "email_on_failure": False,
     "email_on_retry": False,
     "retries": 1,
@@ -21,7 +21,7 @@ dag = DAG(
     catchup=False,
     tags=["car_scrape", "etl"],
 )
-
+3   
 
 def run_extraction():
     from src.extract.main_extract import run_extraction as extract
